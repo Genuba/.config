@@ -3,26 +3,11 @@ if not status then
   return
 end
 
+transparent.clear_prefix("winbar")
+
 transparent.setup({
-  extra_groups = { -- table/string: additional groups that should be cleared
-    "BufferlineBufferSelected",
-    "BufferLineFill",
-    "BufferLineBackground",
-    "BufferLineSeparator",
-    "BufferLineIndicatorSelected",
-
-    "IndentBlanklineChar",
-
-    -- make floating windows transparent
-    "LspFloatWinNormal",
-    "Normal",
-    "NormalFloat",
-    "FloatBorder",
-    "TelescopeNormal",
-    "TelescopeBorder",
-    "TelescopePromptBorder",
-    "SagaBorder",
-    "SagaNormal",
+  extra_groups = {
+    "NormalFloat", -- plugins which have float panel such as Lazy, Mason, LspInfo
     "NvimTreeNormal", -- NvimTree
   },
 })

@@ -21,7 +21,6 @@ local colors = {
 }
 
 -- change nightlfy theme colors
-
 lualine_nightfly.inactive = {
   a = { fg = colors.gray, bg = colors.outerbg, gui = "bold" },
   b = { fg = colors.gray, bg = colors.outerbg },
