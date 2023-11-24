@@ -1,13 +1,14 @@
-local status, transparent = pcall(require, "transparent")
-if not status then
-  return
-end
+return {
+  "xiyaowong/transparent.nvim",
+  config = function()
+    local transparent = require("transparent")
+    transparent.clear_prefix("winbar")
 
-transparent.clear_prefix("winbar")
-
-transparent.setup({
-  extra_groups = {
-    "NormalFloat", -- plugins which have float panel such as Lazy, Mason, LspInfo
-    "NvimTreeNormal", -- NvimTree
-  },
-})
+    transparent.setup({
+      extra_groups = {
+        "NormalFloat", -- plugins which have float panel such as Lazy, Mason, LspInfo
+        "NvimTreeNormal", -- NvimTree
+      },
+    })
+  end,
+}
